@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenido a SkillsPack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="onboarding" aria-live="polite">
+    <header class="onboarding__header">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true">◆</span>
+        <span class="brand__name">SkillsPack</span>
+      </div>
+      <button type="button" class="link-btn" id="skipBtn">Omitir</button>
+    </header>
+
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+    <p class="progress__label" id="progressLabel">Paso 1 de 4</p>
+
+    <section class="steps" id="steps">
+      <!-- Step 1 -->
+      <article class="step is-active" data-step="1">
+        <div class="step__icon" aria-hidden="true">👋</div>
+        <h1 class="step__title">Te damos la bienvenida</h1>
+        <p class="step__text">SkillsPack te ayuda a organizar, descubrir y dominar nuevas habilidades. Vamos a configurar tu cuenta en unos pocos pasos.</p>
+      </article>
+
+      <!-- Step 2 -->
+      <article class="step" data-step="2">
+        <div class="step__icon" aria-hidden="true">🧑‍💻</div>
+        <h1 class="step__title">Cuéntanos sobre ti</h1>
+        <p class="step__text">Personalizaremos tu experiencia según tu perfil.</p>
+        <form class="field-group" id="profileForm">
+          <label class="field">
+            <span class="field__label">Tu nombre</span>
+            <input type="text" name="name" placeholder="Iris Roman" autocomplete="name" />
+          </label>
+          <label class="field">
+            <span class="field__label">¿Cuál es tu rol?</span>
+            <select name="role">
+              <option value="">Selecciona una opción</option>
+              <option>Estudiante</option>
+              <option>Profesional</option>
+              <option>Mentor / Instructor</option>
+              <option>Otro</option>
+            </select>
+          </label>
+        </form>
+      </article>
+
+      <!-- Step 3 -->
+      <article class="step" data-step="3">
+        <div class="step__icon" aria-hidden="true">🎯</div>
+        <h1 class="step__title">Elige tus intereses</h1>
+        <p class="step__text">Selecciona las áreas que quieres desarrollar.</p>
+        <div class="chips" id="interests">
+          <button type="button" class="chip">Programación</button>
+          <button type="button" class="chip">Diseño</button>
+          <button type="button" class="chip">Datos &amp; IA</button>
+          <button type="button" class="chip">Producto</button>
+          <button type="button" class="chip">Marketing</button>
+          <button type="button" class="chip">Liderazgo</button>
+          <button type="button" class="chip">Idiomas</button>
+          <button type="button" class="chip">Finanzas</button>
+        </div>
+      </article>
+
+      <!-- Step 4 -->
+      <article class="step" data-step="4">
+        <div class="step__icon" aria-hidden="true">🚀</div>
+        <h1 class="step__title">¡Todo listo!</h1>
+        <p class="step__text">Tu espacio está preparado. Empieza a explorar paquetes de habilidades hechos a tu medida.</p>
+        <ul class="summary" id="summary"></ul>
+      </article>
+    </section>
+
+    <footer class="onboarding__footer">
+      <button type="button" class="btn btn--ghost" id="backBtn" disabled>Atrás</button>
+      <button type="button" class="btn btn--primary" id="nextBtn">Continuar</button>
+    </footer>
+  </main>
+
+  <script src="onboarding.js"></script>
+</body>
+</html>
