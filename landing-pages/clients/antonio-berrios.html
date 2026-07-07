@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>90 Days Restart Coaching Program — Antonio Berrios</title>
+
+<!--
+  ============================================================
+  REBRANDABLE ENROLLMENT LANDING — MASTER TEMPLATE
+  ------------------------------------------------------------
+  This one file is the mold for all 10 client pages.
+  To rebrand a client, change ONLY the CONTROL PANEL below
+  (the :root variables) + the <body data-preset> letter +
+  the visible text/logo in the HTML. Nothing else.
+
+  1) BRAND COLORS -> --brand-accent / --brand-accent-2 / --brand-accent-ink
+     NOTE on --brand-accent-ink (text color that sits ON TOP of the
+     accent color, e.g. button labels):
+       * accent is LIGHT (gold/yellow)   -> keep ink DARK  (#1a1a1a)
+       * accent is DARK  (navy/red/green) -> set ink WHITE  (#ffffff)
+  2) FONTS -> swap --font-head / --font-body (families already loaded below)
+  3) LAYOUT SKIN -> <body data-preset="A|B|C">
+       A = centered hero, rounded cards (default, = original)
+       B = left hero (room for a photo), sharper asymmetric cards, uppercase headings
+       C = editorial, airy, serif headings
+     Rotate presets across the 10 so none feel cloned.
+  4) TEXT/LOGO -> replace the copy in the HTML (brand name, program,
+     coach names, FAQ, footer links).
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  /* ===== CONTROL PANEL — edit per client ===== */
+  --brand-accent:      #be161b;   /* Berrios bright red */
+  --brand-accent-2:    #940b15;   /* Berrios deep red */
+  --brand-accent-ink:  #ffffff;   /* dark accent -> white ink */
+
+  --font-head: 'Oswald', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  /* ============================================ */
+
+  /* structural (usually leave as-is) */
+  --bg-0:    #1a0304;   /* oxblood */
+  --bg-1:    #260709;
+  --bg-2:    #340a0d;
+  --line:    rgba(255,255,255,.10);
+  --text:    #f4f1ea;
+  --muted:   #a7a29a;
+  --radius:  18px;
+  --maxw:    1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg-0);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.accent{color:var(--brand-accent)}
+
+/* ---------- HEADER ---------- */
+.site-header{background:var(--bg-0);border-bottom:1px solid var(--line);padding:18px 0;position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
+.site-header .wrap{display:flex;align-items:center;justify-content:center;gap:12px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:800;letter-spacing:.5px}
+.logo__mark{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand-accent),var(--brand-accent-2));color:var(--brand-accent-ink);font-weight:800;font-size:18px}
+.logo__name{font-size:18px;line-height:1.1}
+.logo__name small{display:block;font-size:11px;letter-spacing:3px;color:var(--muted);font-weight:600}
+
+/* ---------- HERO ---------- */
+.hero{padding:72px 0 40px;position:relative;overflow:hidden}
+.eyebrow{display:inline-block;font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--brand-accent);border:1px solid color-mix(in srgb,var(--brand-accent) 45%,transparent);padding:7px 16px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,6vw,64px);letter-spacing:-.5px;margin-bottom:18px}
+.hero p.lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:640px}
+.hero__inner{max-width:760px}
+
+/* ---------- INFO CARDS ---------- */
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:44px 0}
+.info-card{background:var(--bg-1);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.info-card .k{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.info-card .v{font-family:var(--font-head);font-weight:700;font-size:18px}
+
+/* ---------- INCLUDED ---------- */
+.included{background:var(--bg-1);border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);padding:36px;margin:12px 0 44px}
+.included h2{font-size:26px;margin-bottom:24px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:14px 34px}
+.check{display:flex;gap:12px;align-items:flex-start}
+.check .dot{flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--brand-accent),var(--brand-accent-2));color:var(--brand-accent-ink);display:grid;place-items:center;font-weight:800;font-size:14px;margin-top:2px}
+
+/* ---------- SCARCITY ---------- */
+.scarcity{text-align:center;margin:0 0 44px}
+.badge{display:inline-block;background:color-mix(in srgb,var(--brand-accent) 16%,transparent);color:var(--brand-accent);border:1px solid color-mix(in srgb,var(--brand-accent) 40%,transparent);font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:14px}
+.scarcity p{color:var(--muted);max-width:560px;margin:0 auto}
+.trust{margin-top:14px;font-size:13px;color:var(--muted);display:flex;gap:8px;justify-content:center;align-items:center}
+
+/* ---------- CHECKOUT ---------- */
+.checkout{background:var(--bg-1);border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);padding:34px;max-width:640px;margin:0 auto 60px}
+.stepper{display:flex;gap:10px;margin-bottom:26px}
+.stepper .st{flex:1;text-align:center;font-family:var(--font-head);font-weight:600;font-size:13px;padding:12px;border-radius:12px;border:1px solid var(--line);color:var(--muted)}
+.stepper .st.is-active{background:color-mix(in srgb,var(--brand-accent) 14%,transparent);color:var(--brand-accent);border-color:color-mix(in srgb,var(--brand-accent) 40%,transparent)}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:7px;font-weight:600}
+.field input{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--text);font-family:var(--font-body);font-size:15px}
+.field input:focus{outline:none;border-color:var(--brand-accent)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--brand-accent),var(--brand-accent-2));color:var(--brand-accent-ink);font-family:var(--font-head);font-weight:800;font-size:16px;letter-spacing:.4px;border:none;border-radius:14px;padding:16px 28px;width:100%;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px color-mix(in srgb,var(--brand-accent) 35%,transparent)}
+.checkout .note{text-align:center;font-size:12px;color:var(--muted);margin-top:14px}
+
+/* ---------- FAQ ---------- */
+.faq{background:#f6f5f1;color:#17171a;padding:64px 0}
+.faq h2{font-size:32px;text-align:center;margin-bottom:32px;color:#17171a}
+.faq details{background:#fff;border:1px solid #e7e4dc;border-radius:14px;padding:0 22px;margin-bottom:12px;max-width:760px;margin-left:auto;margin-right:auto}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--font-head);font-weight:700;font-size:17px;padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand-accent);font-size:24px;font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 20px;color:#55524c;line-height:1.7}
+
+/* ---------- FINAL CTA ---------- */
+.final-cta{text-align:center;padding:70px 0}
+.final-cta h2{font-size:clamp(28px,4.5vw,44px);margin-bottom:24px}
+.final-cta .btn{max-width:340px;margin:0 auto}
+
+/* ---------- FOOTER ---------- */
+.site-footer{background:var(--bg-1);border-top:1px solid var(--line);padding:48px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+.site-footer h4{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.site-footer a{display:block;color:var(--muted);margin-bottom:10px;font-size:14px}
+.site-footer a:hover{color:var(--brand-accent)}
+.footer-bottom{border-top:1px solid var(--line);margin-top:36px;padding-top:22px;font-size:12px;color:var(--muted);text-align:center}
+
+/* ================= PRESET SKINS ================= */
+/* Preset B — left hero + asymmetric sharper cards + uppercase headings */
+[data-preset="B"]{--radius:8px}
+[data-preset="B"] .site-header .wrap{justify-content:flex-start}
+[data-preset="B"] .hero__inner{max-width:100%}
+[data-preset="B"] .hero h1{text-transform:uppercase;letter-spacing:1px}
+[data-preset="B"] .eyebrow{border-radius:4px}
+[data-preset="B"] .info-card:nth-child(odd){transform:translateY(10px)}
+[data-preset="B"] .badge{border-radius:4px}
+[data-preset="B"] .scarcity{text-align:left}
+[data-preset="B"] .scarcity p{margin-left:0}
+[data-preset="B"] .checkout{margin-left:0}
+[data-preset="B"] .logo__mark{border-radius:6px}
+
+/* Preset B two-column hero (photo on the right) */
+[data-preset="B"] .hero__inner.has-photo{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero__photo{position:relative;display:grid;place-items:center;min-height:340px}
+.hero__photo::before{content:"";position:absolute;inset:0;margin:auto;width:78%;height:78%;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--brand-accent) 55%,transparent),transparent 70%);filter:blur(10px)}
+.hero__photo .frame{position:relative;z-index:2;width:100%;min-height:320px;border-radius:12px;border:1px dashed color-mix(in srgb,var(--brand-accent) 60%,transparent);display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px;background:color-mix(in srgb,var(--brand-accent) 6%,transparent)}
+.hero__photo .frame .cap{font-family:var(--font-head);font-weight:700;color:var(--brand-accent);margin-top:10px}
+
+/* Preset C — editorial / airy / serif */
+[data-preset="C"]{--radius:0px}
+[data-preset="C"] h1,[data-preset="C"] h2,[data-preset="C"] .logo{font-family:'Playfair Display',serif}
+[data-preset="C"] .hero{padding:110px 0 60px}
+[data-preset="C"] .info-grid{grid-template-columns:1fr 1fr}
+[data-preset="C"] .info-card{border-left:3px solid var(--brand-accent);background:transparent}
+[data-preset="C"] .eyebrow{border:none;padding-left:0;color:var(--muted)}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:820px){
+  .info-grid{grid-template-columns:1fr 1fr}
+  .checks{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  [data-preset="B"] .hero__inner.has-photo{grid-template-columns:1fr}
+  [data-preset="B"] .info-card:nth-child(odd){transform:none}
+}
+</style>
+</head>
+
+<body data-preset="B">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <!-- GHL: replace .logo__mark with an <img> of the real logo -->
+      <div class="logo">
+        <span class="logo__mark">AB</span>
+        <span class="logo__name">BERRIOS<small>FINANCIAL</small></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__inner has-photo">
+        <div>
+          <span class="eyebrow">Secure Enrollment</span>
+          <h1>90 Days <span class="accent">Restart</span> Coaching Program</h1>
+          <p class="lead">Reset your money story in 90 days. A high-accountability coaching program to break the old patterns, rebuild your foundation, and restart with a plan that actually sticks — led by Antonio Berrios.</p>
+        </div>
+        <!-- GHL: delete the placeholder frame and drop Antonio's transparent-background cutout photo here. The red glow is already behind it. -->
+        <div class="hero__photo">
+          <div class="frame">
+            <span>Drop Antonio's cutout photo here</span>
+            <span class="cap">— Antonio Berrios</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO CARDS -->
+  <section class="wrap">
+    <div class="info-grid">
+      <div class="info-card"><div class="k">Program</div><div class="v">90 Days Restart</div></div>
+      <div class="info-card"><div class="k">Coach</div><div class="v">Antonio Berrios</div></div>
+      <div class="info-card"><div class="k">Duration</div><div class="v">12 Weeks</div></div>
+      <div class="info-card"><div class="k">You Get</div><div class="v">Fresh Financial Start</div></div>
+    </div>
+  </section>
+
+  <!-- INCLUDED -->
+  <section class="wrap">
+    <div class="included">
+      <h2>Everything Included in Your Restart</h2>
+      <div class="checks">
+        <div class="check"><span class="dot">✓</span><span>Weekly live group coaching calls</span></div>
+        <div class="check"><span class="dot">✓</span><span>Personalized 90-day money roadmap</span></div>
+        <div class="check"><span class="dot">✓</span><span>Budget &amp; cash-flow system templates</span></div>
+        <div class="check"><span class="dot">✓</span><span>Private community access</span></div>
+        <div class="check"><span class="dot">✓</span><span>Debt-payoff &amp; savings frameworks</span></div>
+        <div class="check"><span class="dot">✓</span><span>Accountability check-ins</span></div>
+        <div class="check"><span class="dot">✓</span><span>Lifetime access to all resources</span></div>
+        <div class="check"><span class="dot">✓</span><span>Bonus: 1:1 kickoff strategy session</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCARCITY -->
+  <section class="wrap">
+    <div class="scarcity">
+      <span class="badge">Limited Spots</span>
+      <p>Antonio keeps each Restart cohort small so every member gets real coaching attention. Once this group fills, the next start date opens in the following quarter.</p>
+      <div class="trust">🔒 Secure SSL checkout · Your information is protected</div>
+    </div>
+  </section>
+
+  <!-- CHECKOUT -->
+  <section class="wrap">
+    <div class="checkout">
+      <div class="stepper">
+        <div class="st is-active">1 · Contact</div>
+        <div class="st">2 · Payment</div>
+      </div>
+      <!-- GHL: this form is VISUAL. Embed the native GHL form widget for real capture. -->
+      <form onsubmit="return false">
+        <div class="row2">
+          <div class="field"><label>First name</label><input type="text" placeholder="Jane" /></div>
+          <div class="field"><label>Last name</label><input type="text" placeholder="Doe" /></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" placeholder="jane@email.com" /></div>
+        <div class="field"><label>Phone</label><input type="tel" placeholder="(555) 000-0000" /></div>
+        <button class="btn" type="submit">Continue to Payment →</button>
+        <p class="note">🔒 Encrypted &amp; secure. No charges until you confirm on the next step.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Frequently Asked Questions</h2>
+      <details open><summary>Who is this program for?</summary><p>Anyone ready to take control of their finances — whether you're starting from scratch, digging out of debt, or leveling up. The frameworks scale to your situation.</p></details>
+      <details><summary>How much time do I need each week?</summary><p>Plan for about 2–3 hours: one live call plus light implementation. Everything is designed to fit around a full-time schedule.</p></details>
+      <details><summary>What if I can't attend a live call?</summary><p>Every session is recorded and posted in the member area, so you can catch up anytime and keep your momentum.</p></details>
+      <details><summary>Is there a guarantee?</summary><p>Yes. If you show up, do the work, and don't see progress in your first 30 days, reach out and we'll make it right.</p></details>
+      <details><summary>When does the next cohort start?</summary><p>Spots are filled on a rolling basis. Secure your seat above and you'll receive your start date and onboarding details by email.</p></details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Ready to <span class="accent">restart?</span></h2>
+      <a href="#" class="btn">Claim Your Spot Now →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="logo"><span class="logo__mark">AB</span><span class="logo__name">BERRIOS<small>FINANCIAL</small></span></div>
+          <p style="color:var(--muted);margin-top:14px;max-width:320px;font-size:14px">Antonio Berrios — coaching you to restart, rebuild, and take control of your money.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="#">Home</a><a href="#faq">FAQ</a><a href="#">Terms</a><a href="#">Privacy</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a><a href="#">Email Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="yr"></span> Berrios Financial. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
