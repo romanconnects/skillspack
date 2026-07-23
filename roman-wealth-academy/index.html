@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roman Wealth Academy — IMPERIVM</title>
+<meta name="description" content="Roman Wealth Academy — construye un imperio financiero que dura siglos. Educación de riqueza, disciplina y legado." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --black:#070A12;
+  --ink:#141317;
+  --marble:#F4F1EA;
+  --vein:#CFC7B3;
+  --gold:#E5C15A;
+  --gold-2:#C9A227;
+  --gold-deep:#9A7B1E;
+  --blue:#1B3A6B;
+  --blue-2:#2E5AA8;
+  --blue-light:#5A87D0;
+  --muted:#8C8578;
+  --display:"Cinzel",serif;
+  --serif:"EB Garamond",Georgia,serif;
+  --ui:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  background:var(--black);color:var(--marble);
+  font-family:var(--serif);font-size:18px;line-height:1.6;
+  overflow-x:hidden;
+}
+::selection{background:var(--gold);color:var(--black)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ---------- shared ---------- */
+.eyebrow{
+  font-family:var(--ui);font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.display{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:.01em}
+.latin{font-family:var(--serif);font-style:italic;color:var(--vein)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+.gold-text{color:var(--gold)}
+
+/* ---------- top bar ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px clamp(20px,5vw,48px);
+  mix-blend-mode:difference;
+}
+.nav__brand{display:flex;align-items:center;gap:12px;font-family:var(--display);
+  font-weight:700;letter-spacing:.18em;font-size:.9rem;text-transform:uppercase}
+.nav__brand svg{width:30px;height:30px}
+.nav__links{display:flex;gap:30px;font-family:var(--ui);font-size:.74rem;
+  letter-spacing:.18em;text-transform:uppercase}
+.nav__links a{opacity:.75;transition:opacity .3s}
+.nav__links a:hover{opacity:1}
+@media(max-width:720px){.nav__links{display:none}}
+
+/* ---------- progress rail ---------- */
+.rail{position:fixed;top:0;left:0;height:2px;width:0;z-index:70;
+  background:linear-gradient(90deg,var(--blue-2),var(--gold-deep),var(--gold));}
+
+/* ==================================================================
+   FILM
+   ================================================================== */
+.film{position:relative;z-index:1}
+
+/* --- SCENE 1 : the chisel --- */
+#scene-hero{height:100vh;position:relative;display:grid;place-items:center;
+  background:
+    radial-gradient(120% 90% at 50% 42%,#14213f 0%,transparent 55%),
+    radial-gradient(90% 70% at 50% 38%,rgba(90,135,208,.10),transparent 60%),
+    var(--black);overflow:hidden}
+.hero__inner{text-align:center;position:relative;z-index:2}
+.hero__eyebrow{margin-bottom:26px;opacity:0}
+.hero__word{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(3.4rem,17vw,15rem);letter-spacing:.04em;line-height:.9;
+  color:transparent;
+  background:linear-gradient(180deg,#fff 0%,var(--gold) 55%,var(--gold-deep) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  display:flex;justify-content:center;
+}
+.hero__word .ch{display:inline-block;transform:translateY(115%);opacity:0}
+.hero__sub{font-family:var(--display);font-weight:400;letter-spacing:.55em;
+  text-transform:uppercase;font-size:clamp(.6rem,1.7vw,1rem);
+  margin-top:22px;color:var(--vein);opacity:0}
+.hero__rule{height:1px;width:0;margin:30px auto 0;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero__scrollcue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+  font-family:var(--ui);font-size:.66rem;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--muted);opacity:0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero__scrollcue span{display:block;width:1px;height:34px;
+  background:linear-gradient(var(--gold),transparent)}
+
+/* --- SCENE 2 : the frieze (pull-back) --- */
+#scene-frieze{height:100vh;position:relative;display:grid;place-items:center;
+  background:
+    linear-gradient(180deg,var(--black),transparent 18%,transparent 82%,var(--black)),
+    linear-gradient(105deg,#e9e4d7,#f6f2e9 30%,#d9d2c0 55%,#efeadd 78%,#e2dccb);
+  color:var(--ink);overflow:hidden}
+#scene-frieze::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(102deg,rgba(120,110,88,.06) 0 2px,transparent 2px 26px),
+             repeating-linear-gradient(-8deg,rgba(120,110,88,.05) 0 1px,transparent 1px 40px);
+  mix-blend-mode:multiply;opacity:.8}
+.frieze__inner{text-align:center;position:relative;z-index:2;padding:0 24px}
+.frieze__latin{font-family:var(--display);font-weight:600;
+  font-size:clamp(1.6rem,5.2vw,4.4rem);letter-spacing:.06em;color:#2c2618}
+.frieze__latin em{font-style:normal;color:var(--gold-deep)}
+.frieze__gloss{font-style:italic;color:#6b6350;margin-top:20px;
+  font-size:clamp(1rem,2vw,1.3rem)}
+
+/* --- SCENE 3 : columns + counter --- */
+#scene-columns{position:relative;background:var(--black)}
+.columns__pin{height:100vh;position:relative;overflow:hidden;display:flex;align-items:center}
+.columns__track{display:flex;align-items:flex-end;gap:clamp(40px,7vw,120px);
+  padding:0 12vw;height:64vh;will-change:transform}
+.col{flex:0 0 auto;width:clamp(46px,7vw,96px);height:100%;position:relative;
+  background:linear-gradient(90deg,#0f0e0c,#2b2519 12%,#4a3f27 30%,#7a6636 50%,#4a3f27 70%,#2b2519 88%,#0f0e0c);
+  border-radius:6px 6px 0 0;box-shadow:0 0 60px rgba(0,0,0,.6)}
+.col::before{content:"";position:absolute;top:-18px;left:-14%;width:128%;height:26px;
+  background:linear-gradient(90deg,#2b2519,#7a6636,#2b2519);border-radius:4px}
+.col::after{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,rgba(0,0,0,.35) 0 2px,transparent 2px 10px);
+  border-radius:6px 6px 0 0;opacity:.5}
+.columns__counter{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;z-index:3;pointer-events:none;text-align:center}
+.counter__label{margin-bottom:14px}
+.counter__num{font-family:var(--display);font-weight:800;
+  font-size:clamp(3rem,12vw,10rem);letter-spacing:.02em;
+  color:transparent;background:linear-gradient(180deg,#fff,var(--gold) 60%,var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text;
+  text-shadow:0 0 80px rgba(229,193,90,.15)}
+.counter__cap{font-family:var(--ui);font-size:.72rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--muted);margin-top:18px}
+
+/* --- SCENE 4 : the coin --- */
+#scene-coin{height:150vh;position:relative;background:var(--black)}
+.coin__pin{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden}
+.coin{width:min(52vh,52vw);aspect-ratio:1;border-radius:50%;position:relative;
+  will-change:transform;
+  background:
+    radial-gradient(circle at 34% 30%,#fff5d6 0%,var(--gold) 22%,var(--gold-2) 46%,var(--gold-deep) 74%,#5c4712 100%);
+  box-shadow:0 0 0 6px rgba(154,123,30,.35),0 0 120px rgba(229,193,90,.35),
+             inset 0 6px 24px rgba(255,255,255,.35),inset 0 -14px 32px rgba(0,0,0,.4)}
+.coin::before{content:"";position:absolute;inset:9%;border-radius:50%;
+  border:2px solid rgba(92,71,18,.5);
+  box-shadow:inset 0 0 26px rgba(255,240,190,.4)}
+.coin__mark{position:absolute;inset:0;display:grid;place-items:center;
+  font-family:var(--display);font-weight:800;font-size:min(20vh,20vw);color:#5c4712;
+  text-shadow:0 2px 1px rgba(255,255,255,.35)}
+.coin__flash{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,#fff7dd,var(--gold) 45%,var(--gold-deep) 100%);
+  opacity:0;z-index:5;pointer-events:none}
+
+/* ==================================================================
+   AFTER-FILM CONTENT
+   ================================================================== */
+.section{position:relative;z-index:2;padding:clamp(90px,13vh,170px) 0}
+.section__head{max-width:760px;margin-bottom:64px}
+.section__head .eyebrow{display:block;margin-bottom:20px}
+.section__title{font-family:var(--display);font-weight:700;
+  font-size:clamp(2.1rem,5.5vw,4rem);line-height:1.04;letter-spacing:.01em}
+.section__lede{color:var(--vein);font-size:clamp(1.05rem,2vw,1.35rem);margin-top:24px;max-width:620px}
+.reveal{opacity:0;transform:translateY(38px)}
+
+/* seam: gold → programs */
+#programs{background:
+   radial-gradient(140% 60% at 50% -10%,rgba(229,193,90,.14),transparent 60%),
+   var(--black)}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;
+  border:1px solid rgba(207,199,179,.12);background:rgba(207,199,179,.12)}
+.pillar{background:var(--black);padding:44px 34px 40px;position:relative;
+  transition:background .5s}
+.pillar:hover{background:#111017}
+.pillar__num{font-family:var(--display);font-weight:700;color:var(--gold-deep);
+  font-size:.9rem;letter-spacing:.3em}
+.pillar__name{font-family:var(--display);font-weight:600;font-size:1.6rem;margin:18px 0 6px}
+.pillar__tier{font-family:var(--ui);font-size:.68rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--muted)}
+.pillar__desc{color:var(--vein);margin-top:20px;font-size:1.02rem}
+.pillar__list{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:9px}
+.pillar__list li{padding-left:22px;position:relative;font-size:.98rem;color:#c8c1b2}
+.pillar__list li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;
+  transform:rotate(45deg);background:var(--gold-deep)}
+
+/* manifesto */
+#manifesto{background:
+  radial-gradient(100% 60% at 50% 0%,rgba(27,58,107,.28),transparent 60%),
+  linear-gradient(180deg,var(--black),#0a1122 50%,var(--black))}
+.manifesto__grid{display:grid;grid-template-columns:1fr;gap:40px}
+.creed{border-top:1px solid rgba(207,199,179,.14);padding-top:26px;margin-top:6px}
+.creed h3{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--gold)}
+.creed p{color:var(--vein);margin-top:12px;max-width:560px}
+.manifesto__grid.cols{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.manifesto__grid.cols{grid-template-columns:1fr}}
+
+/* results */
+#results{background:var(--black)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+  border:1px solid rgba(207,199,179,.12);background:rgba(207,199,179,.12);margin-bottom:56px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--black);padding:40px 26px;text-align:center}
+.stat__n{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);
+  color:transparent;background:linear-gradient(180deg,#fff,var(--gold) 70%,var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text}
+.stat__l{font-family:var(--ui);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);margin-top:14px}
+.quote{max-width:880px;margin:0 auto;text-align:center}
+.quote__mark{font-family:var(--display);color:var(--gold-deep);font-size:5rem;line-height:.4}
+.quote__body{font-family:var(--serif);font-style:italic;
+  font-size:clamp(1.4rem,3.2vw,2.2rem);line-height:1.4;color:var(--marble)}
+.quote__by{font-family:var(--ui);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);margin-top:28px}
+
+/* CTA */
+#enroll{background:
+  radial-gradient(120% 80% at 50% 120%,rgba(229,193,90,.16),transparent 55%),
+  var(--black);text-align:center}
+.cta__title{font-family:var(--display);font-weight:800;
+  font-size:clamp(2.4rem,8vw,6rem);line-height:1;letter-spacing:.02em;
+  color:transparent;background:linear-gradient(180deg,#fff,var(--gold) 60%,var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text}
+.cta__sub{color:var(--vein);max-width:520px;margin:26px auto 44px;font-size:1.2rem}
+.btn{display:inline-flex;align-items:center;gap:14px;
+  font-family:var(--ui);font-weight:600;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:20px 40px;border-radius:2px;position:relative;overflow:hidden;
+  color:var(--black);background:linear-gradient(180deg,var(--gold),var(--gold-2));
+  transition:transform .3s,box-shadow .3s;box-shadow:0 10px 40px rgba(229,193,90,.25)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(229,193,90,.4)}
+.btn__ghost{background:transparent;color:var(--marble);border:1px solid rgba(207,199,179,.3);
+  box-shadow:none;margin-left:14px}
+.btn__ghost:hover{border-color:var(--blue-light);color:var(--blue-light);box-shadow:none}
+.cta__row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.cta__fine{font-family:var(--ui);font-size:.72rem;letter-spacing:.1em;color:var(--muted);margin-top:34px}
+
+/* footer */
+footer{border-top:1px solid rgba(207,199,179,.12);padding:60px 0 48px;position:relative;z-index:2}
+.foot{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.foot__brand{display:flex;align-items:center;gap:12px;font-family:var(--display);
+  font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.foot__brand svg{width:34px;height:34px}
+.foot__tag{color:var(--muted);margin-top:14px;max-width:280px;font-size:.98rem}
+.foot__cols{display:flex;gap:60px;flex-wrap:wrap}
+.foot__col h4{font-family:var(--ui);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px}
+.foot__col a{display:block;color:var(--vein);font-size:.96rem;margin-bottom:10px;transition:color .3s}
+.foot__col a:hover{color:var(--marble)}
+.socials{display:flex;gap:16px;margin-top:20px}
+.socials a{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;
+  border:1px solid rgba(207,199,179,.2);transition:.3s}
+.socials a:hover{border-color:var(--gold);background:rgba(229,193,90,.08)}
+.socials svg{width:17px;height:17px;fill:var(--vein)}
+.socials a:hover svg{fill:var(--gold)}
+.foot__legal{margin-top:48px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  font-family:var(--ui);font-size:.72rem;color:var(--muted);letter-spacing:.06em}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+  .hero__word .ch{transform:none!important;opacity:1!important}
+  .hero__eyebrow,.hero__sub,.hero__scrollcue{opacity:1!important}
+  .reveal{opacity:1!important;transform:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== brand mark (reused) ===== -->
+<template id="coinmark">
+  <svg viewBox="0 0 100 100" aria-hidden="true">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F4E4A8"/><stop offset="1" stop-color="#9A7B1E"/>
+      </linearGradient>
+    </defs>
+    <circle cx="50" cy="50" r="46" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="url(#g)" stroke-width="1" opacity=".6"/>
+    <path d="M50 16 l4.5 9.5 10.5 1.4 -7.7 7.2 1.9 10.4 -9.2-5 -9.2 5 1.9-10.4 -7.7-7.2 10.5-1.4z" fill="url(#g)" opacity=".9"/>
+    <text x="50" y="72" text-anchor="middle" font-family="Cinzel,serif" font-weight="800" font-size="30" fill="url(#g)">R</text>
+  </svg>
+</template>
+
+<div class="rail" id="rail"></div>
+
+<nav class="nav">
+  <a class="nav__brand" href="#top"><span class="brandmark"></span>Roman Wealth Academy</a>
+  <div class="nav__links">
+    <a href="#programs">Programas</a>
+    <a href="#manifesto">Doctrina</a>
+    <a href="#results">Resultados</a>
+    <a href="#enroll">Ingresar</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ================= FILM ================= -->
+  <div class="film">
+
+    <!-- SCENE 1 -->
+    <section id="scene-hero">
+      <div class="hero__inner">
+        <p class="eyebrow hero__eyebrow">Roman Wealth Academy · Est. MMXXV</p>
+        <h1 class="hero__word" aria-label="ROMAN" id="heroWord"></h1>
+        <div class="hero__rule" id="heroRule"></div>
+        <p class="hero__sub">Wealth · Academy</p>
+      </div>
+      <div class="hero__scrollcue" id="scrollCue">Desciende<span></span></div>
+    </section>
+
+    <!-- SCENE 2 -->
+    <section id="scene-frieze">
+      <div class="frieze__inner">
+        <p class="frieze__latin">La riqueza no se hereda.<br><em>Se construye piedra sobre piedra.</em></p>
+        <p class="frieze__gloss">Divitiae non nascuntur — aedificantur.</p>
+      </div>
+    </section>
+
+    <!-- SCENE 3 -->
+    <section id="scene-columns">
+      <div class="columns__pin">
+        <div class="columns__track" id="colTrack"></div>
+        <div class="columns__counter">
+          <p class="eyebrow counter__label">El ascenso del capital</p>
+          <div class="counter__num" id="counter">$0</div>
+          <p class="counter__cap">Del primer denario al primer millón</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 4 -->
+    <section id="scene-coin">
+      <div class="coin__pin">
+        <div class="coin" id="coin"><span class="coin__mark">R</span></div>
+        <div class="coin__flash" id="flash"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ================= CONTENT ================= -->
+
+  <!-- PROGRAMS -->
+  <section class="section" id="programs">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Los cuatro pilares</span>
+        <h2 class="section__title">Programas que construyen imperios</h2>
+        <p class="section__lede">Cada nivel es una columna del templo. Se avanza en orden — porque un imperio sin cimientos se derrumba.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar reveal">
+          <div class="pillar__num">I</div>
+          <h3 class="pillar__name">Fundamenta</h3>
+          <p class="pillar__tier">Los cimientos</p>
+          <p class="pillar__desc">Domina el dinero antes de que él te domine. Presupuesto, deuda, y la mentalidad del constructor.</p>
+          <ul class="pillar__list"><li>Flujo de caja personal</li><li>Eliminación de deuda</li><li>Primer fondo de guerra</li></ul>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar__num">II</div>
+          <h3 class="pillar__name">Machina</h3>
+          <p class="pillar__tier">La máquina</p>
+          <p class="pillar__desc">Construye ingresos que trabajan sin ti. Inversión indexada, activos y el poder del interés compuesto.</p>
+          <ul class="pillar__list"><li>Mercados e índices</li><li>Interés compuesto aplicado</li><li>Cartera antifrágil</li></ul>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar__num">III</div>
+          <h3 class="pillar__name">Imperium</h3>
+          <p class="pillar__tier">El imperio</p>
+          <p class="pillar__desc">De inversionista a dueño. Negocios, bienes raíces y estructuras que multiplican capital.</p>
+          <ul class="pillar__list"><li>Bienes raíces</li><li>Adquisición de negocios</li><li>Apalancamiento inteligente</li></ul>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar__num">IV</div>
+          <h3 class="pillar__name">Legatum</h3>
+          <p class="pillar__tier">El legado</p>
+          <p class="pillar__desc">Riqueza que sobrevive generaciones. Protección, herencia y el arte de dejar un imperio.</p>
+          <ul class="pillar__list"><li>Blindaje patrimonial</li><li>Planeación sucesoria</li><li>Filantropía estratégica</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="section" id="manifesto">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Doctrina</span>
+        <h2 class="section__title">No enseñamos a ser ricos.<br>Enseñamos a <span class="gold-text">construir</span>.</h2>
+        <p class="section__lede">Roma no se hizo con suerte ni con atajos. Se hizo con disciplina, tiempo e ingeniería. Tu patrimonio se hace igual.</p>
+      </div>
+      <div class="manifesto__grid cols">
+        <div class="creed reveal"><h3>Disciplina sobre impulso</h3><p>La fortuna favorece al que ejecuta un plan aburrido durante veinte años, no al que persigue la moda del mes.</p></div>
+        <div class="creed reveal"><h3>Tiempo como aliado</h3><p>El interés compuesto es la octava maravilla. Empezar hoy, aunque sea con poco, vence a empezar mañana con mucho.</p></div>
+        <div class="creed reveal"><h3>Legado sobre lujo</h3><p>Un imperio no se mide por lo que gastas, sino por lo que sigue de pie cuando ya no estás.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="section" id="results">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">La prueba está en la piedra</span>
+        <h2 class="section__title">Resultados que perduran</h2>
+      </div>
+      <div class="stats">
+        <div class="stat reveal"><div class="stat__n" data-count="12000" data-suffix="+">0</div><div class="stat__l">Estudiantes formados</div></div>
+        <div class="stat reveal"><div class="stat__n" data-count="94" data-suffix="%">0</div><div class="stat__l">Terminan el Pilar I</div></div>
+        <div class="stat reveal"><div class="stat__n" data-count="38" data-prefix="$" data-suffix="M">0</div><div class="stat__l">Deuda eliminada</div></div>
+        <div class="stat reveal"><div class="stat__n" data-count="4" data-suffix="★">0</div><div class="stat__l">Pilares al dominio</div></div>
+      </div>
+      <blockquote class="quote reveal">
+        <div class="quote__mark">“</div>
+        <p class="quote__body">Entré endeudado y sin rumbo. Dos años después tengo un fondo de emergencia, una cartera que crece sola y, por primera vez, un plan para mis hijos. No me hicieron rico de la noche a la mañana — me enseñaron a construir.</p>
+        <p class="quote__by">— Estudiante del Pilar III · Roman Wealth Academy</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ENROLL / CTA -->
+  <section class="section" id="enroll">
+    <div class="wrap">
+      <p class="eyebrow reveal" style="display:block;margin-bottom:26px">La cantera está abierta</p>
+      <h2 class="cta__title reveal">Empieza tu imperio</h2>
+      <p class="cta__sub reveal">La primera piedra es la más difícil de colocar. Colócala hoy — el ascenso empieza con el primer denario.</p>
+      <div class="cta__row reveal">
+        <a class="btn" href="#" onclick="return false">Aplicar al programa →</a>
+        <a class="btn btn__ghost" href="#" onclick="return false">Agendar una llamada</a>
+      </div>
+      <p class="cta__fine reveal">Cupos limitados por cohorte · Garantía de 14 días</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="foot__brand"><span class="brandmark"></span>Roman Wealth Academy</div>
+        <p class="foot__tag">Educación de riqueza, disciplina y legado. Un imperio se construye piedra sobre piedra.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" onclick="return false"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.99 1.4-.4.5-.8.8-1.4 1-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.99-.5-.4-.8-.8-1-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .99-1.4.4-.5.8-.8 1.4-1 .4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2m0 1.6c-3.1 0-3.5 0-4.7.1-1.1 0-1.7.2-2.1.35-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.15.4-.3 1-.35 2.1C2.6 9.7 2.6 10.1 2.6 12s0 2.3.1 3.5c0 1.1.2 1.7.35 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.15 1 .3 2.1.35 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1 0 1.7-.2 2.1-.35.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.15-.4.3-1 .35-2.1.1-1.2.1-1.6.1-3.5s0-2.3-.1-3.5c0-1.1-.2-1.7-.35-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.15-1-.3-2.1-.35-1.2-.1-1.6-.1-4.7-.1m0 2.7a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6m0 1.6a3.7 3.7 0 1 0 0 7.4 3.7 3.7 0 0 0 0-7.4m5.5-2.9a1.24 1.24 0 1 1 0 2.48 1.24 1.24 0 0 1 0-2.48"/></svg></a>
+          <a href="#" aria-label="YouTube" onclick="return false"><svg viewBox="0 0 24 24"><path d="M23 7.5a2.8 2.8 0 0 0-2-2C19.3 5 12 5 12 5s-7.3 0-9 .5a2.8 2.8 0 0 0-2 2C1 9.2 1 12 1 12s0 2.8.5 4.5a2.8 2.8 0 0 0 2 2c1.7.5 9 .5 9 .5s7.3 0 9-.5a2.8 2.8 0 0 0 2-2C23 14.8 23 12 23 12s0-2.8-.5-4.5M9.8 15.3V8.7l6 3.3-6 3.3"/></svg></a>
+          <a href="#" aria-label="X" onclick="return false"><svg viewBox="0 0 24 24"><path d="M18.9 2h3.3l-7.2 8.3 8.5 11.2h-6.6l-5.2-6.8-6 6.8H2.4l7.7-8.8L1.9 2h6.8l4.7 6.2zm-1.2 18h1.8L7.1 3.9H5.2z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" onclick="return false"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM10 9h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot__cols">
+        <div class="foot__col"><h4>Programas</h4><a href="#programs" onclick="return false">I · Fundamenta</a><a href="#programs" onclick="return false">II · Machina</a><a href="#programs" onclick="return false">III · Imperium</a><a href="#programs" onclick="return false">IV · Legatum</a></div>
+        <div class="foot__col"><h4>Academia</h4><a href="#manifesto" onclick="return false">Doctrina</a><a href="#results" onclick="return false">Resultados</a><a href="#enroll" onclick="return false">Ingresar</a></div>
+        <div class="foot__col"><h4>Contacto</h4><a href="#" onclick="return false">hola@romanwealth.academy</a><a href="#" onclick="return false">Prensa</a><a href="#" onclick="return false">Comunidad</a></div>
+      </div>
+    </div>
+    <div class="foot__legal">
+      <span>© <span id="year"></span> Roman Wealth Academy · Aedificamus.</span>
+      <span>Privacidad · Términos · Aviso legal</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== libs ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.0.42/lenis.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduced = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+  // fill brand marks
+  var tpl = document.getElementById("coinmark").innerHTML;
+  document.querySelectorAll(".brandmark").forEach(function(n){ n.innerHTML = tpl; });
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // build hero letters
+  var hero = document.getElementById("heroWord");
+  "ROMAN".split("").forEach(function(c){
+    var s=document.createElement("span"); s.className="ch"; s.textContent=c; hero.appendChild(s);
+  });
+  // build columns
+  var track=document.getElementById("colTrack");
+  for(var i=0;i<9;i++){var d=document.createElement("div");d.className="col";
+    d.style.height=(52+Math.sin(i)*10+i*2)+"%";track.appendChild(d);}
+
+  if(!window.gsap){ document.querySelectorAll(".reveal,.hero__word .ch").forEach(function(n){n.style.opacity=1;n.style.transform="none";}); window.__ready=true; return; }
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------- smooth scroll (Lenis ↔ ScrollTrigger) ---------- */
+  var lenis;
+  if(!reduced && window.Lenis){
+    lenis=new Lenis({lerp:.1,wheelMultiplier:1});
+    lenis.on("scroll",ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t*1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  /* ---------- progress rail ---------- */
+  gsap.to("#rail",{width:"100%",ease:"none",
+    scrollTrigger:{trigger:document.body,start:"top top",end:"bottom bottom",scrub:.3}});
+
+  /* ================= FILM (build pinned scenes FIRST) ================= */
+  if(!reduced){
+    // SCENE 1 — chisel-in
+    var t1=gsap.timeline({defaults:{ease:"power4.out"}});
+    t1.to(".hero__eyebrow",{opacity:1,duration:.8,delay:.2})
+      .to(".hero__word .ch",{y:"0%",opacity:1,duration:1.1,stagger:.09},"-=.3")
+      .to("#heroRule",{width:"min(320px,60vw)",duration:1,ease:"power2.inOut"},"-=.4")
+      .to(".hero__sub",{opacity:1,duration:.8},"-=.6")
+      .to("#scrollCue",{opacity:1,duration:.8},"-=.3");
+
+    // SCENE 1 parallax-out on scroll
+    gsap.to(".hero__inner",{yPercent:-30,opacity:.25,ease:"none",
+      scrollTrigger:{trigger:"#scene-hero",start:"top top",end:"bottom top",scrub:true}});
+
+    // SCENE 2 — frieze pull-back
+    gsap.fromTo("#scene-frieze .frieze__inner",{scale:1.28,filter:"blur(6px)"},
+      {scale:1,filter:"blur(0px)",ease:"none",
+       scrollTrigger:{trigger:"#scene-frieze",start:"top bottom",end:"center center",scrub:true}});
+    gsap.to("#scene-frieze .frieze__inner",{yPercent:-14,ease:"none",
+      scrollTrigger:{trigger:"#scene-frieze",start:"center center",end:"bottom top",scrub:true}});
+
+    // SCENE 3 — pinned horizontal column run + counter
+    var colPin=gsap.timeline({
+      scrollTrigger:{trigger:"#scene-columns",start:"top top",end:"+=180%",scrub:.6,pin:".columns__pin",anticipatePin:1}
+    });
+    colPin.fromTo("#colTrack",{xPercent:8},{xPercent:-46,ease:"none"},0);
+    var counterEl=document.getElementById("counter");
+    var cObj={v:0};
+    colPin.to(cObj,{v:1000000,ease:"power2.in",
+      onUpdate:function(){counterEl.textContent = "$"+fmt(Math.floor(cObj.v));}},0);
+
+    // SCENE 4 — coin spin + fall + gold flash
+    var coinTl=gsap.timeline({
+      scrollTrigger:{trigger:"#scene-coin",start:"top top",end:"bottom bottom",scrub:.5,pin:".coin__pin"}
+    });
+    coinTl.fromTo("#coin",{rotationY:0,scale:.5,y:-40},{rotationY:540,scale:1,y:0,ease:"none"},0)
+          .to("#coin",{y:120,scale:1.15,ease:"power1.in"},.55)
+          .to("#flash",{opacity:1,ease:"power2.in"},.8)
+          .to("#coin",{opacity:0,duration:.1},.86);
+    // flash carries into the programs seam, then clears
+    ScrollTrigger.create({trigger:"#programs",start:"top center",
+      onEnter:function(){gsap.to("#flash",{opacity:0,duration:1,ease:"power2.out"});}});
+  } else {
+    // reduced: reveal counter final value statically
+    document.getElementById("counter").textContent="$1,000,000";
+    document.querySelectorAll(".hero__eyebrow,.hero__sub,#scrollCue,.hero__word .ch").forEach(function(n){n.style.opacity=1;});
+  }
+
+  /* ================= AMBIENT / CONTENT (AFTER pinned scenes) ================= */
+  // reveal-on-scroll
+  gsap.utils.toArray(".reveal").forEach(function(el){
+    gsap.to(el,{opacity:1,y:0,duration:1,ease:"power3.out",
+      scrollTrigger:{trigger:el,start:"top 85%"}});
+  });
+  // stat counters
+  gsap.utils.toArray(".stat__n").forEach(function(el){
+    var target=+el.dataset.count, pre=el.dataset.prefix||"", suf=el.dataset.suffix||"", o={v:0};
+    ScrollTrigger.create({trigger:el,start:"top 88%",once:true,onEnter:function(){
+      gsap.to(o,{v:target,duration:1.8,ease:"power2.out",
+        onUpdate:function(){el.textContent=pre+fmt(Math.floor(o.v))+suf;}});
+    }});
+  });
+
+  function fmt(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");}
+
+  /* ================= DEV CONTRACT ================= */
+  // ?jump=<scrollY> — land pre-scrolled with state settled
+  var jump=new URLSearchParams(location.search).get("jump");
+  ScrollTrigger.refresh();
+  if(jump!==null){
+    var y=parseInt(jump,10)||0;
+    if(lenis){lenis.scrollTo(y,{immediate:true});}
+    window.scrollTo(0,y);
+    ScrollTrigger.update();
+  }
+  // signal ready only once everything is measured
+  requestAnimationFrame(function(){requestAnimationFrame(function(){
+    ScrollTrigger.refresh();
+    window.__ready=true;
+  });});
+})();
+</script>
+</body>
+</html>
