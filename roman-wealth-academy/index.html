@@ -68,15 +68,9 @@ img{max-width:100%;display:block}
   background-clip:text;color:transparent}
 .hero .sub{font-size:clamp(1.05rem,2.4vw,1.4rem);color:var(--muted);margin:22px auto 0;max-width:44ch}
 .vsl{margin:34px auto 0;max-width:760px;aspect-ratio:16/9;border-radius:14px;position:relative;
-  background:linear-gradient(150deg,#0e1626,#0a0f1a);border:1px solid rgba(108,155,234,.25);
-  overflow:hidden;display:grid;place-items:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.vsl::after{content:"[ Reemplazar con el VSL de Carlos ]";position:absolute;bottom:12px;left:0;right:0;
-  text-align:center;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
-.vsl__play{width:78px;height:78px;border-radius:50%;background:rgba(232,194,94,.95);
-  display:grid;place-items:center;box-shadow:0 10px 40px rgba(232,194,94,.4);cursor:pointer;
-  transition:transform .2s}
-.vsl__play:hover{transform:scale(1.06)}
-.vsl__play svg{width:30px;height:30px;fill:#111;margin-left:5px}
+  background:#0a0f1a;border:1px solid rgba(108,155,234,.25);
+  overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 .hero__cta{margin-top:36px;display:flex;flex-direction:column;align-items:center}
 .trustrow{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:26px;
   font-size:.82rem;color:var(--muted)}
@@ -228,7 +222,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
       <p class="sub reveal">You did the hard part — you got licensed. But nobody handed you a system to actually produce. <b style="color:#fff">Before you quit, watch this.</b></p>
 
       <div class="vsl reveal">
-        <div class="vsl__play" role="button" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <iframe src="https://vt.lightspeedvt.com/share/embed.cfm?cmpid=9859&amp;token=72D608D0" title="Before you quit — watch this | Carlos Roman" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" scrolling="no" allowfullscreen loading="eager"></iframe>
       </div>
 
       <div class="hero__cta reveal">
