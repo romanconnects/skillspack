@@ -3,208 +3,210 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Roman Wealth Academy — You Got Licensed. Now Become a Producer.</title>
+<title>Roman Wealth Academy — You Already Got Licensed. Now Become a Producer.</title>
 <meta name="description" content="The production system licensed insurance agents wish they had from day one. Stop making endless calls — build real production. Apply to Roman Wealth Academy." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
 <style>
 :root{
-  --black:#080B12; --panel:#0D111C; --panel-2:#111726;
-  --line:rgba(255,255,255,.08);
-  --white:#F5F7FB; --muted:#9AA3B2; --dim:#6B7385;
-  --blue:#2E5AA8; --blue-2:#3E72CE; --blue-light:#6C9BEA;
-  --gold:#E8C25E; --gold-2:#C9A227;
-  --green:#39C07A; --red:#D96A6A;
-  --ui:"Inter",system-ui,sans-serif; --disp:"Cinzel",serif;
+  --black:#050608; --panel:#0A0C10; --panel-2:#0E1117;
+  --line:rgba(255,255,255,.07);
+  --white:#F2F4F8; --muted:#98A0AD; --dim:#5F6675;
+  --blue:#1E4FA3; --blue-2:#2E63C4; --blue-light:#4A85E8; --blue-pale:#7FA8EF;
+  --green:#39C07A; --red:#C96A6A;
+  --ui:"Inter",system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--ui);
-  font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-::selection{background:var(--gold);color:#000}
+  font-size:16.5px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--blue-light);color:#fff}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
-.narrow{max-width:820px;margin-inline:auto}
-.eyebrow{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.wrap{max-width:980px;margin:0 auto;padding:0 clamp(18px,4.5vw,40px)}
 .center{text-align:center}
-.gold{color:var(--gold)} .blue{color:var(--blue-light)}
 
-/* ---- buttons (the conversion核) ---- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font-weight:800;font-size:1.02rem;letter-spacing:.01em;text-align:center;
-  padding:19px 40px;border-radius:10px;cursor:pointer;border:0;line-height:1.2;
-  color:#1a1400;background:linear-gradient(180deg,#F3D278,var(--gold) 55%,var(--gold-2));
-  box-shadow:0 10px 30px rgba(232,194,94,.28),inset 0 1px 0 rgba(255,255,255,.5);
-  transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(232,194,94,.4)}
-.btn:active{transform:translateY(0)}
-.btn--lg{padding:22px 52px;font-size:1.12rem;width:100%;max-width:440px}
-.btn__sub{display:block;font-size:.72rem;font-weight:600;letter-spacing:.06em;
-  color:var(--dim);text-transform:none;margin-top:10px}
-.btn-note{font-size:.82rem;color:var(--muted);margin-top:14px}
-.tick{color:var(--green);font-weight:700}
-
-/* ---- sticky top bar ---- */
-.bar{position:sticky;top:0;z-index:50;background:rgba(8,11,18,.82);
-  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.bar__in{display:flex;align-items:center;justify-content:space-between;
-  padding:12px clamp(18px,4vw,40px);max-width:1160px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);
-  font-weight:700;letter-spacing:.1em;font-size:.92rem;text-transform:uppercase}
-.brand svg{width:30px;height:30px}
-.bar .btn{padding:12px 24px;font-size:.86rem}
-@media(max-width:560px){.brand span.long{display:none}.bar .btn{padding:11px 18px;font-size:.8rem}}
-
-/* ---- hero ---- */
-.hero{padding:clamp(40px,7vw,72px) 0 clamp(48px,7vw,80px);position:relative;
-  background:radial-gradient(120% 80% at 50% 0%,rgba(46,90,168,.22),transparent 55%),var(--black)}
-.hero h1{font-weight:900;letter-spacing:-.02em;line-height:1.04;
-  font-size:clamp(2.1rem,6.2vw,4rem);margin:18px auto 0;max-width:16ch}
-.hero h1 .u{background:linear-gradient(180deg,#fff,var(--gold));-webkit-background-clip:text;
-  background-clip:text;color:transparent}
-.hero .sub{font-size:clamp(1.05rem,2.4vw,1.4rem);color:var(--muted);margin:22px auto 0;max-width:44ch}
-.vsl{margin:34px auto 0;max-width:760px;aspect-ratio:16/9;border-radius:14px;position:relative;
-  background:#0a0f1a;border:1px solid rgba(108,155,234,.25);
-  overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-.hero__cta{margin-top:36px;display:flex;flex-direction:column;align-items:center}
-.trustrow{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:26px;
-  font-size:.82rem;color:var(--muted)}
-.trustrow span{display:flex;align-items:center;gap:7px}
-
-/* ---- section shell ---- */
-.sec{padding:clamp(56px,9vw,104px) 0;position:relative}
-.sec--panel{background:var(--panel)}
-.sec--line{border-top:1px solid var(--line)}
-.h2{font-weight:800;letter-spacing:-.015em;line-height:1.1;
-  font-size:clamp(1.7rem,4.4vw,3rem)}
-.h2 .disp{font-family:var(--disp);font-weight:700}
-.lede{color:var(--muted);font-size:clamp(1.05rem,2vw,1.28rem);margin-top:18px;max-width:56ch}
-.kicker{margin-bottom:16px}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+/* ------- type system (their editorial uppercase look) ------- */
+.h-xl,.h-lg,.h-md{font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.06}
+.h-xl{font-size:clamp(1.9rem,5.6vw,3.4rem)}
+.h-lg{font-size:clamp(1.55rem,4.4vw,2.6rem)}
+.h-md{font-size:clamp(1.2rem,3vw,1.7rem)}
+.b{color:var(--blue-light)}
+.kicker{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--blue-pale);margin-bottom:16px;display:block}
+.sub{color:var(--muted);font-size:clamp(.98rem,1.9vw,1.12rem);margin-top:16px;max-width:56ch}
+.rule{width:56px;height:3px;background:var(--blue-2);margin:22px 0}
+.center .rule,.center.sub,.center .sub{margin-inline:auto}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 
-/* ---- steps you did ---- */
-.did{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:36px;
-  border:1px solid var(--line);background:var(--line);border-radius:12px;overflow:hidden}
-@media(max-width:720px){.did{grid-template-columns:1fr 1fr}}
-.did>div{background:var(--panel-2);padding:22px 18px}
-.did b{color:var(--blue-light);font-weight:800;font-size:.8rem;letter-spacing:.1em}
-.did p{margin-top:8px;font-weight:600;font-size:.98rem}
-.reality{margin-top:30px;text-align:center;padding:34px;border-radius:12px;
-  background:linear-gradient(180deg,rgba(217,106,106,.08),transparent);border:1px solid rgba(217,106,106,.2)}
-.reality .big{font-family:var(--disp);font-weight:800;font-size:clamp(2rem,7vw,3.6rem);color:#fff;line-height:1}
-.reality p{color:var(--muted);margin-top:10px}
+/* ------- buttons ------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:800;font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;text-align:center;
+  padding:17px 34px;border-radius:8px;cursor:pointer;border:0;line-height:1.25;color:#fff;
+  background:linear-gradient(180deg,var(--blue-light),var(--blue-2) 60%,var(--blue));
+  box-shadow:0 10px 30px rgba(46,99,196,.35),inset 0 1px 0 rgba(255,255,255,.25);
+  transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(46,99,196,.5)}
+.btn:active{transform:none}
+.btn--lg{padding:20px 46px;font-size:1rem;width:100%;max-width:430px}
+.btn__sub{display:block;font-size:.66rem;font-weight:600;letter-spacing:.08em;color:var(--dim);text-transform:none;margin-top:10px}
+.tick{color:var(--green);font-weight:800}
 
-/* ---- the turn (big statement) ---- */
-.turn{text-align:center;padding-block:clamp(60px,10vw,120px)}
-.turn h2{font-family:var(--disp);font-weight:800;line-height:1.08;
-  font-size:clamp(2rem,6vw,4rem);max-width:16ch;margin-inline:auto}
+/* ------- sticky bar ------- */
+.bar{position:sticky;top:0;z-index:50;background:rgba(5,6,8,.86);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar__in{display:flex;align-items:center;justify-content:space-between;
+  padding:11px clamp(18px,4vw,40px);max-width:1120px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.14em;
+  font-size:.8rem;text-transform:uppercase}
+.brand svg{width:28px;height:28px}
+.bar .btn{padding:11px 22px;font-size:.78rem}
+@media(max-width:560px){.brand span.long{display:none}}
 
-/* ---- system cards ---- */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:40px}
-.card{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:26px 24px;
-  transition:border-color .3s,transform .3s}
-.card:hover{border-color:rgba(108,155,234,.4);transform:translateY(-3px)}
-.card .n{font-family:var(--disp);font-weight:800;color:var(--gold);font-size:1.1rem}
-.card h3{font-weight:800;font-size:1.22rem;margin:10px 0 4px}
-.card .t{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-light);font-weight:700}
-.card p{color:var(--muted);margin-top:14px;font-size:.98rem}
+/* ------- hero ------- */
+.hero{padding:clamp(44px,7vw,80px) 0 clamp(50px,7vw,84px);position:relative;
+  background:radial-gradient(110% 70% at 50% 0%,rgba(30,79,163,.28),transparent 55%),var(--black)}
+.hero h1{font-weight:900;text-transform:uppercase;line-height:1.04;letter-spacing:-.015em;
+  font-size:clamp(2.1rem,6.4vw,4.1rem);margin:14px auto 0;max-width:17ch}
+.vsl{margin:36px auto 0;max-width:740px;aspect-ratio:16/9;border-radius:10px;position:relative;
+  background:#0a0f1a;border:1px solid rgba(74,133,232,.3);overflow:hidden;
+  box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 60px rgba(30,79,163,.12)}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.hero__cta{margin-top:36px;display:flex;flex-direction:column;align-items:center}
+.trustrow{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:24px;
+  font-size:.8rem;color:var(--muted)}
+.trustrow span{display:flex;align-items:center;gap:7px}
 
-/* ---- for / not for ---- */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px}
-@media(max-width:680px){.split{grid-template-columns:1fr}}
-.col-for,.col-not{border:1px solid var(--line);border-radius:14px;padding:28px 26px;background:var(--panel-2)}
-.col-for{border-color:rgba(57,192,122,.25)}
-.col-not{border-color:rgba(217,106,106,.22)}
-.col-for h4,.col-not h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:18px}
-.col-for h4{color:var(--green)}.col-not h4{color:var(--red)}
-.li{display:flex;gap:12px;margin-bottom:14px;color:var(--muted);font-size:1rem}
-.li svg{width:20px;height:20px;flex:0 0 20px;margin-top:3px}
+/* ------- sections ------- */
+.sec{padding:clamp(60px,9vw,110px) 0;border-top:1px solid var(--line);position:relative}
+.sec--panel{background:var(--panel)}
+.sec--glow{background:radial-gradient(90% 60% at 50% 0%,rgba(30,79,163,.16),transparent 60%),var(--black)}
 
-/* ---- mentor ---- */
-.mentor{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(26px,5vw,60px);align-items:center}
+/* numbered rows (their 01-05 style) */
+.rows{margin-top:34px;border-top:1px solid var(--line)}
+.row{display:flex;gap:clamp(18px,4vw,40px);align-items:baseline;
+  padding:20px 4px;border-bottom:1px solid var(--line)}
+.row .n{font-weight:900;color:var(--blue-light);font-size:.95rem;letter-spacing:.1em;flex:0 0 2.2em}
+.row .t{font-weight:800;text-transform:uppercase;font-size:clamp(.98rem,2.2vw,1.15rem);letter-spacing:.02em}
+.row .d{color:var(--muted);font-size:.95rem;margin-left:auto;max-width:46ch;text-align:right}
+@media(max-width:680px){.row{flex-wrap:wrap}.row .d{margin-left:3.3em;text-align:left;flex-basis:100%}}
+
+/* promised vs reality */
+.pvr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+@media(max-width:680px){.pvr{grid-template-columns:1fr}}
+.pvr>div{border:1px solid var(--line);border-radius:10px;padding:26px 24px;background:var(--panel-2)}
+.pvr h4{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin-bottom:16px}
+.pvr .prom h4{color:var(--blue-pale)} .pvr .real h4{color:var(--red)}
+.pvr .li{display:flex;gap:11px;margin-bottom:12px;color:var(--muted);font-size:.96rem}
+.pvr .li b{color:var(--white)}
+.pvr .li .ic{flex:0 0 18px;margin-top:4px}
+
+/* big statement (MORE CALLS.) */
+.smash{text-align:center;padding-block:clamp(70px,11vw,130px)}
+.smash .pre{color:var(--muted);font-size:clamp(.95rem,2vw,1.15rem);text-transform:uppercase;letter-spacing:.14em;font-weight:700}
+.smash .big{font-weight:900;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;
+  font-size:clamp(3.4rem,13vw,8.5rem);margin-top:18px;
+  background:linear-gradient(180deg,var(--blue-pale),var(--blue-2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.smash .post{color:var(--muted);margin:26px auto 0;max-width:52ch}
+
+/* system cards → numbered breakdown rows */
+.break{margin-top:36px;border-top:1px solid var(--line)}
+.break>div{padding:26px 4px;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:auto 1fr;gap:6px clamp(18px,4vw,40px)}
+.break .n{font-weight:900;color:var(--blue-light);letter-spacing:.1em;font-size:.95rem;grid-row:span 2;padding-top:4px}
+.break h3{font-weight:900;text-transform:uppercase;font-size:clamp(1.05rem,2.6vw,1.35rem)}
+.break p{color:var(--muted);font-size:.97rem;max-width:66ch}
+
+/* photo band (Carlos) */
+.mentor{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(26px,5vw,56px);align-items:center}
 @media(max-width:760px){.mentor{grid-template-columns:1fr}}
-.mentor__ph{border-radius:14px;background:linear-gradient(160deg,#14213b,#0a1120);
-  border:1px solid rgba(108,155,234,.22);position:relative;overflow:hidden}
+.mentor__ph{border-radius:10px;position:relative;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(160deg,#0d1524,#080b12)}
 .mentor__ph img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-.mentor__name{font-family:var(--disp);font-weight:700;font-size:clamp(1.8rem,5vw,2.8rem)}
-.mentor__role{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-light);font-weight:700;margin-top:8px}
-.mentor p{color:var(--muted);margin-top:18px}
+.mentor__name{font-weight:900;text-transform:uppercase;font-size:clamp(1.9rem,5vw,3rem);letter-spacing:-.01em}
+.mentor__role{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--blue-pale);font-weight:800;margin-top:8px}
+.mentor p{color:var(--muted);margin-top:16px;font-size:.99rem}
 
-/* ---- testimonials ---- */
-.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:36px}
-.tcard{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:26px 24px}
-.tcard .stars{color:var(--gold);letter-spacing:2px;font-size:.9rem}
-.tcard p{margin-top:14px;font-size:1rem}
-.tcard .by{margin-top:16px;font-size:.82rem;color:var(--dim);font-weight:600}
+/* for / not for */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+@media(max-width:680px){.split{grid-template-columns:1fr}}
+.split>div{border:1px solid var(--line);border-radius:10px;padding:26px 24px;background:var(--panel-2)}
+.split h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;margin-bottom:16px}
+.split .for h4{color:var(--green)} .split .not h4{color:var(--red)}
+.split .li{display:flex;gap:11px;margin-bottom:12px;color:var(--muted);font-size:.96rem}
+.split .li svg{width:18px;height:18px;flex:0 0 18px;margin-top:4px}
 
-/* ---- how it works ---- */
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
-@media(max-width:720px){.how{grid-template-columns:1fr}}
-.how>div{border:1px solid var(--line);border-radius:14px;padding:28px 24px;background:var(--panel-2);position:relative}
-.how .n{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;
-  background:rgba(108,155,234,.14);color:var(--blue-light);margin-bottom:16px}
-.how h4{font-weight:800;font-size:1.2rem;margin-bottom:8px}
-.how p{color:var(--muted);font-size:.98rem}
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:34px}
+.tcard{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:24px 22px}
+.tcard .stars{color:var(--blue-light);letter-spacing:2px;font-size:.86rem}
+.tcard p{margin-top:12px;font-size:.96rem;color:var(--white)}
+.tcard .by{margin-top:14px;font-size:.78rem;color:var(--dim);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 
-/* ---- FAQ ---- */
-.faq{margin-top:34px;max-width:780px;margin-inline:auto}
-.faq details{border-bottom:1px solid var(--line);padding:20px 0}
-.faq summary{font-weight:700;font-size:1.08rem;cursor:pointer;list-style:none;
-  display:flex;justify-content:space-between;gap:20px;align-items:center}
+/* apply steps */
+.how{margin-top:36px;border-top:1px solid var(--line)}
+.how>div{padding:26px 4px;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:auto 1fr;gap:4px clamp(18px,4vw,40px)}
+.how .n{font-weight:900;color:var(--blue-light);letter-spacing:.1em;font-size:.95rem;grid-row:span 2;padding-top:4px}
+.how h4{font-weight:900;text-transform:uppercase;font-size:1.1rem}
+.how p{color:var(--muted);font-size:.96rem;max-width:60ch}
+
+/* FAQ */
+.faq{margin-top:30px;max-width:760px;margin-inline:auto}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font-weight:800;font-size:.98rem;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;gap:20px;align-items:center;
+  text-transform:uppercase;letter-spacing:.03em}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--gold);font-weight:400;font-size:1.6rem;line-height:1}
+.faq summary::after{content:"+";color:var(--blue-light);font-weight:400;font-size:1.5rem;line-height:1}
 .faq details[open] summary::after{content:"–"}
-.faq p{color:var(--muted);margin-top:14px}
+.faq p{color:var(--muted);margin-top:12px;font-size:.95rem}
 
-/* ---- final CTA ---- */
-.final{text-align:center;background:
-  radial-gradient(110% 80% at 50% 120%,rgba(232,194,94,.16),transparent 55%),
-  radial-gradient(90% 60% at 50% 0%,rgba(46,90,168,.2),transparent 60%),var(--black)}
-.final h2{font-family:var(--disp);font-weight:800;line-height:1.05;
-  font-size:clamp(2.1rem,6.5vw,4.4rem);max-width:15ch;margin-inline:auto}
-.guarantee{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:14px 22px;
-  border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:.92rem}
-.guarantee svg{width:22px;height:22px;fill:var(--gold)}
+/* final CTA */
+.final{text-align:center;border-top:1px solid var(--line);
+  background:radial-gradient(100% 80% at 50% 115%,rgba(30,79,163,.3),transparent 60%),var(--black);
+  padding:clamp(70px,11vw,130px) 0}
+.final .h-xl{max-width:16ch;margin-inline:auto}
+.guarantee{display:inline-flex;align-items:center;gap:11px;margin-top:28px;padding:13px 20px;
+  border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:.86rem}
+.guarantee svg{width:20px;height:20px;fill:var(--blue-light)}
 
-/* ---- footer ---- */
-footer{border-top:1px solid var(--line);padding:52px 0 40px}
-.foot{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start}
-.foot__tag{color:var(--dim);margin-top:12px;max-width:280px;font-size:.94rem}
-.socials{display:flex;gap:14px;margin-top:18px}
-.socials a{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line)}
-.socials a:hover{border-color:var(--gold)}
-.socials svg{width:16px;height:16px;fill:var(--muted)}
-.socials a:hover svg{fill:var(--gold)}
-.foot__links{display:flex;gap:50px;flex-wrap:wrap}
-.foot__links h5{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.foot__links a{display:block;color:var(--muted);font-size:.92rem;margin-bottom:9px}
-.disc{margin-top:38px;font-size:.72rem;color:var(--dim);line-height:1.7;max-width:760px}
+/* footer */
+footer{border-top:1px solid var(--line);padding:48px 0 38px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot__tag{color:var(--dim);margin-top:12px;max-width:280px;font-size:.9rem}
+.socials{display:flex;gap:12px;margin-top:16px}
+.socials a{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line)}
+.socials a:hover{border-color:var(--blue-light)}
+.socials svg{width:15px;height:15px;fill:var(--muted)}
+.socials a:hover svg{fill:var(--blue-light)}
+.foot__links{display:flex;gap:44px;flex-wrap:wrap}
+.foot__links h5{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-pale);margin-bottom:12px}
+.foot__links a{display:block;color:var(--muted);font-size:.88rem;margin-bottom:8px}
+.disc{margin-top:34px;font-size:.7rem;color:var(--dim);line-height:1.7;max-width:760px}
 
-/* ---- sticky mobile CTA ---- */
-.mobicta{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px;
-  background:rgba(8,11,18,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);
+/* sticky mobile CTA */
+.mobicta{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:11px 14px;
+  background:rgba(5,6,8,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);
   transform:translateY(120%);transition:transform .3s;display:none}
 .mobicta.show{transform:none}
-.mobicta .btn{width:100%;padding:16px}
-@media(max-width:720px){.mobicta{display:block}body{padding-bottom:76px}}
+.mobicta .btn{width:100%;padding:15px}
+@media(max-width:720px){.mobicta{display:block}body{padding-bottom:72px}}
 </style>
 </head>
 <body>
 
 <template id="mark">
   <svg viewBox="0 0 100 100" aria-hidden="true"><defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6C9BEA"/><stop offset="1" stop-color="#2E5AA8"/></linearGradient></defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A85E8"/><stop offset="1" stop-color="#1E4FA3"/></linearGradient></defs>
     <path d="M28 20 h20 c14 0 22 8 22 20 0 9-5 16-14 19 l16 21 h-16 l-14-19 h-6 v19 h-8z M36 27 v18 h11 c8 0 12-3 12-9s-4-9-12-9z" fill="url(#g)"/>
   </svg>
 </template>
 
-<!-- sticky bar -->
 <div class="bar">
   <div class="bar__in">
     <a class="brand" href="#top"><span class="brandmark"></span><span class="long">Roman Wealth Academy</span></a>
@@ -214,12 +216,13 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 
 <main id="top">
 
-  <!-- ================= HERO ================= -->
+  <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="wrap center">
-      <p class="eyebrow reveal">For licensed insurance agents</p>
-      <h1 class="reveal">Licensed. Frustrated.<br><span class="u">Still not making money?</span></h1>
-      <p class="sub reveal">You did the hard part — you got licensed. But nobody handed you a system to actually produce. <b style="color:#fff">Before you quit, watch this.</b></p>
+      <span class="kicker reveal">For licensed insurance agents</span>
+      <h1 class="reveal">Licensed. Frustrated.<br><span class="b">Still not making money?</span></h1>
+
+      <p class="sub center reveal" style="margin-inline:auto;margin-top:26px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--white)">Before you quit — <span class="b">watch this first.</span></p>
 
       <div class="vsl reveal">
         <iframe src="https://vt.lightspeedvt.com/share/embed.cfm?cmpid=9859&amp;token=72D608D0" title="Before you quit — watch this | Carlos Roman" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" scrolling="no" allowfullscreen loading="eager"></iframe>
@@ -236,104 +239,141 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
     </div>
   </section>
 
-  <!-- ================= YOU DID THE HARD PART ================= -->
-  <section class="sec sec--panel sec--line">
-    <div class="wrap narrow">
-      <p class="eyebrow kicker reveal">You did everything right</p>
-      <h2 class="h2 reveal">You did the hard part.<br>So why are you still <span class="gold">stuck?</span></h2>
-      <p class="lede reveal">You followed every step they gave you. The problem was never you — it's that no one ever handed you a way to produce.</p>
+  <!-- ============ YOU DID THE HARD PART ============ -->
+  <section class="sec sec--panel">
+    <div class="wrap">
+      <h2 class="h-xl reveal">You did the hard part.<br><span class="b">So why are you still stuck?</span></h2>
+      <div class="rule reveal"></div>
+      <p class="sub reveal"><b style="color:var(--white)">What you did</b> — every. single. step.</p>
 
-      <div class="did reveal">
-        <div><b>01</b><p>You studied</p></div>
-        <div><b>02</b><p>You passed</p></div>
-        <div><b>03</b><p>You got licensed</p></div>
-        <div><b>04</b><p>You joined a team</p></div>
-        <div><b>05</b><p>You believed them</p></div>
+      <div class="rows reveal">
+        <div class="row"><span class="n">01</span><span class="t">You studied</span></div>
+        <div class="row"><span class="n">02</span><span class="t">You passed</span></div>
+        <div class="row"><span class="n">03</span><span class="t">You got licensed</span></div>
+        <div class="row"><span class="n">04</span><span class="t">You joined a team</span></div>
+        <div class="row"><span class="n">05</span><span class="t">You believed what they told you</span></div>
       </div>
 
-      <div class="reality reveal">
-        <p style="color:var(--muted);margin-bottom:8px">They promised freedom. Reality delivered —</p>
-        <div class="big gold">More calls.</div>
-        <p>Longer hours, thinner checks, and the quiet fear that maybe you just aren't cut out for this.</p>
+      <div class="pvr">
+        <div class="prom reveal">
+          <h4>What they promised — sounds familiar?</h4>
+          <div class="li"><span class="ic">💬</span><span><b>"Just follow the script."</b></span></div>
+          <div class="li"><span class="ic">💬</span><span><b>"Talk to your warm market."</b></span></div>
+          <div class="li"><span class="ic">💬</span><span><b>"Work hard and freedom will come."</b></span></div>
+        </div>
+        <div class="real reveal">
+          <h4>Then reality hit — hard</h4>
+          <div class="li"><span class="ic">✕</span><span>Dry weeks and thin checks.</span></div>
+          <div class="li"><span class="ic">✕</span><span>Chasing people who never answer.</span></div>
+          <div class="li"><span class="ic">✕</span><span>The quiet fear that maybe it's you.</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= THE TURN ================= -->
-  <section class="sec turn">
+  <!-- ============ MORE CALLS ============ -->
+  <section class="sec smash sec--glow">
     <div class="wrap">
-      <p class="eyebrow kicker reveal">Here's the truth</p>
-      <h2 class="reveal">Your license is not the business.<br>Your <span class="gold">system</span> is.</h2>
-      <p class="lede center reveal" style="margin-inline:auto">Most agents were <b style="color:#fff">recruited to make calls</b> — never trained to build production. Roman Wealth Academy was built to close that exact gap.</p>
+      <p class="pre reveal">Their answer to everything:</p>
+      <div class="big reveal">More<br>calls.</div>
+      <p class="post reveal">Longer hours. Same script. Same results. That's not a plan — that's a treadmill.</p>
+    </div>
+  </section>
+
+  <!-- ============ YOU MAY NOT HAVE FAILED ============ -->
+  <section class="sec sec--panel center">
+    <div class="wrap">
+      <h2 class="h-lg reveal">You may not have <span class="b">failed insurance.</span></h2>
+      <p class="sub center reveal" style="margin-inline:auto">You may have just been handed a phone instead of a system.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE TURN ============ -->
+  <section class="sec sec--glow">
+    <div class="wrap">
+      <h2 class="h-xl reveal">Your license is not <span class="b">the business.</span><br>Your system <span class="b">is.</span></h2>
+      <div class="rule reveal"></div>
+      <p class="sub reveal">Most agents were <b style="color:var(--white)">recruited to make calls</b> — never trained to build production. That requires a <b style="color:var(--white)">real production system.</b></p>
+      <p class="sub reveal" style="margin-top:10px">A system that shows you how to:</p>
+      <div class="rows reveal">
+        <div class="row"><span class="n">→</span><span class="t">Start on purpose</span><span class="d">Know exactly what Monday morning looks like.</span></div>
+        <div class="row"><span class="n">→</span><span class="t">Fill your pipeline weekly</span><span class="d">Conversations on repeat — not luck.</span></div>
+        <div class="row"><span class="n">→</span><span class="t">Close without depending on scripts</span><span class="d">A process, not a personality contest.</span></div>
+        <div class="row"><span class="n">→</span><span class="t">Keep what you close</span><span class="d">A book that compounds instead of leaking.</span></div>
+        <div class="row"><span class="n">→</span><span class="t">Escalate into real production</span><span class="d">From producer to a team that produces.</span></div>
+      </div>
       <div class="reveal" style="margin-top:34px"><a class="btn" href="#apply">Show me the system →</a></div>
     </div>
   </section>
 
-  <!-- ================= THE SYSTEM ================= -->
-  <section class="sec sec--panel sec--line" id="system">
+  <!-- ============ THE PRODUCTION SYSTEM ============ -->
+  <section class="sec sec--panel">
     <div class="wrap">
-      <p class="eyebrow kicker reveal">The production system</p>
-      <h2 class="h2 reveal">Five breakdowns. <span class="disp">One system that fixes them.</span></h2>
-      <p class="lede reveal">These are the exact breakdowns keeping licensed agents underpaid — and what the Academy rebuilds from day one.</p>
-      <div class="cards">
-        <div class="card reveal"><div class="n">I</div><span class="t">Fill the pipeline</span><h3>Prospecting</h3><p>A repeatable way to create conversations — so you're never one dry week from panic.</p></div>
-        <div class="card reveal"><div class="n">II</div><span class="t">Think like a producer</span><h3>Mindset</h3><p>Trade the recruit's hope for the operator's discipline. The identity behind the numbers.</p></div>
-        <div class="card reveal"><div class="n">III</div><span class="t">Keep what you close</span><h3>Retention</h3><p>Stop rewriting the same business. Build a book that compounds instead of leaking.</p></div>
-        <div class="card reveal"><div class="n">IV</div><span class="t">Close with a process</span><h3>Sales</h3><p>A framework that doesn't depend on being "good on the phone" — it depends on the steps.</p></div>
-        <div class="card reveal"><div class="n">V</div><span class="t">Build &amp; escalate</span><h3>Closing &amp; Scale</h3><p>Turn one closed deal into a machine — the path from producer to a team that produces.</p></div>
+      <span class="kicker reveal">Roman Wealth Academy</span>
+      <h2 class="h-lg reveal">The production system licensed agents<br><span class="b">wish they had from day one.</span></h2>
+      <div class="rule reveal"></div>
+      <p class="sub reveal">These are <b style="color:var(--white)">the core breakdowns keeping licensed agents underpaid</b> — and what the Academy rebuilds, in order.</p>
+
+      <div class="break reveal">
+        <div><span class="n">01</span><h3>Prospecting</h3><p>A repeatable way to create conversations — so you're never one dry week from panic.</p></div>
+        <div><span class="n">02</span><h3>Mindset</h3><p>Trade the recruit's hope for the operator's discipline. The identity behind the numbers.</p></div>
+        <div><span class="n">03</span><h3>Retention</h3><p>Stop rewriting the same business. Build a book that compounds instead of leaking.</p></div>
+        <div><span class="n">04</span><h3>Sales</h3><p>A framework that doesn't depend on being "good on the phone" — it depends on the steps.</p></div>
+        <div><span class="n">05</span><h3>Escalation</h3><p>Turn one closed deal into a machine — the path from producer to a team that produces.</p></div>
       </div>
-      <div class="center reveal" style="margin-top:40px"><a class="btn" href="#apply">Apply to install the system</a></div>
+      <div class="center reveal" style="margin-top:36px"><a class="btn" href="#apply">Apply to install the system</a></div>
     </div>
   </section>
 
-  <!-- ================= WHO IT'S FOR ================= -->
-  <section class="sec sec--line">
-    <div class="wrap narrow">
-      <p class="eyebrow kicker reveal">Let's be honest</p>
-      <h2 class="h2 reveal">This is for licensed agents who still believe insurance can work.</h2>
+  <!-- ============ CARLOS ROMAN ============ -->
+  <section class="sec" id="carlos">
+    <div class="wrap">
+      <div class="mentor">
+        <div class="mentor__ph reveal"><img src="https://assets.cdn.filesafe.space/tnylCbVzbCLJez6rFy8n/media/6a39ef52610e9ace5071d7a0.png" alt="Carlos Roman — Founder, Roman Wealth Academy" loading="lazy" /></div>
+        <div class="reveal">
+          <span class="kicker">Your mentor</span>
+          <h2 class="mentor__name">Carlos Roman</h2>
+          <p class="mentor__role">Founder · Roman Wealth Academy</p>
+          <p>Carlos built the production system he wishes someone had handed him on day one — the one that turns a licensed agent into a real producer.</p>
+          <p>No hype. No "just make more calls." A repeatable path from stuck-and-frustrated to a book of business that actually pays you.</p>
+          <p style="color:var(--dim);font-size:.85rem">[ Placeholder — pásame la bio real de Carlos y la reemplazo. ]</p>
+          <div style="margin-top:22px"><a class="btn" href="#apply">Work with Carlos →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO IT'S FOR ============ -->
+  <section class="sec sec--panel">
+    <div class="wrap">
+      <h2 class="h-lg reveal">This is for licensed agents<br><span class="b">who still believe insurance can work.</span></h2>
+      <div class="rule reveal"></div>
       <div class="split">
-        <div class="col-for reveal">
+        <div class="for reveal">
           <h4>This is for you if</h4>
           <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#39C07A" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>You're licensed but production never clicked.</div>
           <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#39C07A" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>You're tired of "just make more calls."</div>
           <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#39C07A" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>You want a system, not another pep talk.</div>
           <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#39C07A" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>You'll do the work when the path is clear.</div>
         </div>
-        <div class="col-not reveal">
-          <h4>This is NOT for you if</h4>
-          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#D96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You want a get-rich-quick shortcut.</div>
-          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#D96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You won't follow a process.</div>
-          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#D96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You're looking for someone to blame.</div>
-          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#D96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You're not actually licensed yet.</div>
+        <div class="not reveal">
+          <h4>This is not for you if</h4>
+          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#C96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You want a get-rich-quick shortcut.</div>
+          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#C96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You won't follow a process.</div>
+          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#C96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You're looking for someone to blame.</div>
+          <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="#C96A6A" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg>You're not actually licensed yet.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= CARLOS ROMAN ================= -->
-  <section class="sec sec--panel sec--line" id="carlos">
+  <!-- ============ NO MORE BIG PROMISES ============ -->
+  <section class="sec sec--glow">
     <div class="wrap">
-      <div class="mentor">
-        <div class="mentor__ph reveal"><img src="https://assets.cdn.filesafe.space/tnylCbVzbCLJez6rFy8n/media/6a39ef52610e9ace5071d7a0.png" alt="Carlos Roman — Founder, Roman Wealth Academy" loading="lazy" /></div>
-        <div class="reveal">
-          <p class="eyebrow kicker">Your mentor</p>
-          <h2 class="mentor__name">Carlos Roman</h2>
-          <p class="mentor__role">Founder · Roman Wealth Academy</p>
-          <p>Carlos built the production system he wishes someone had handed him on day one — the one that turns a licensed agent into a real producer.</p>
-          <p>No hype. No "just make more calls." A repeatable path from stuck-and-frustrated to a book of business that actually pays you.</p>
-          <p style="color:var(--dim);font-size:.9rem">[ Placeholder — pásame la bio real de Carlos y la reemplazo. ]</p>
-          <div style="margin-top:24px"><a class="btn" href="#apply">Work with Carlos →</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= TESTIMONIALS ================= -->
-  <section class="sec sec--line">
-    <div class="wrap">
-      <p class="eyebrow kicker center reveal">What agents say</p>
-      <h2 class="h2 center reveal" style="margin-inline:auto;max-width:18ch">No more big promises without a path.</h2>
-      <p class="center reveal" style="color:var(--dim);font-size:.9rem;margin-top:12px">[ Testimonios ilustrativos — reemplazar con reales ]</p>
+      <h2 class="h-lg reveal">No more big promises<br><span class="b">without a production path.</span></h2>
+      <div class="rule reveal"></div>
+      <p class="sub reveal">Here's what you get: <b style="color:var(--white)">the real decision is math, not motivation.</b> A clear path, honest numbers, and a system you can run every week.</p>
+      <p class="sub reveal" style="color:var(--dim);font-size:.85rem">[ Testimonios ilustrativos — reemplazar con reales ]</p>
       <div class="tgrid">
         <div class="tcard reveal"><div class="stars">★★★★★</div><p>"I got licensed and then just… stalled. The system gave me a path — for the first time I know exactly what I'm doing Monday morning."</p><div class="by">— Licensed agent</div></div>
         <div class="tcard reveal"><div class="stars">★★★★★</div><p>"I stopped chasing and started producing. It's not motivation, it's a process I can actually repeat every week."</p><div class="by">— Licensed agent</div></div>
@@ -342,28 +382,27 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
     </div>
   </section>
 
-  <!-- ================= HOW IT WORKS ================= -->
-  <section class="sec sec--panel sec--line">
+  <!-- ============ APPLY STEPS ============ -->
+  <section class="sec sec--panel">
     <div class="wrap">
-      <p class="eyebrow kicker reveal">How to join</p>
-      <h2 class="h2 reveal">Three steps to becoming a producer.</h2>
-      <div class="how">
-        <div class="reveal"><div class="n">1</div><h4>Apply</h4><p>Tell us where you are right now. Two minutes, no fluff.</p></div>
-        <div class="reveal"><div class="n">2</div><h4>Fit call</h4><p>We make sure the system actually fits your situation before anything else.</p></div>
-        <div class="reveal"><div class="n">3</div><h4>Build &amp; escalate</h4><p>Install the production system and move from stuck to scaling.</p></div>
+      <h2 class="h-lg reveal">Apply to join<br><span class="b">Roman Wealth Academy.</span></h2>
+      <div class="rule reveal"></div>
+      <div class="how reveal">
+        <div><span class="n">01</span><h4>Apply</h4><p>Tell us where you are right now. Two minutes, no fluff — this isn't a mass-enrollment page.</p></div>
+        <div><span class="n">02</span><h4>Fit call</h4><p>We make sure the system actually fits your situation before anything else. If it's not a match, we'll tell you honestly.</p></div>
+        <div><span class="n">03</span><h4>Build and execute</h4><p>Install the production system and move from stuck to scaling — with a clear path you run every week.</p></div>
       </div>
-      <div class="center reveal" style="margin-top:40px"><a class="btn btn--lg" href="#apply" style="margin-inline:auto">Start my application</a></div>
+      <div class="center reveal" style="margin-top:36px"><a class="btn btn--lg" href="#apply" style="margin-inline:auto">Start my application</a></div>
     </div>
   </section>
 
-  <!-- ================= FAQ ================= -->
-  <section class="sec sec--line">
+  <!-- ============ FAQ ============ -->
+  <section class="sec">
     <div class="wrap">
-      <p class="eyebrow kicker center reveal">Questions</p>
-      <h2 class="h2 center reveal" style="margin-inline:auto">Before you apply</h2>
+      <h2 class="h-md center reveal">Before you apply</h2>
       <div class="faq reveal">
         <details><summary>Do I need to already be licensed?</summary><p>Yes. Roman Wealth Academy is built specifically for agents who already have their license and now need a production system. If you're not licensed yet, this isn't the right fit.</p></details>
-        <details><summary>Is this just motivation and pep talks?</summary><p>No. It's a repeatable production system — prospecting, sales, retention and scale. Motivation fades by Friday; a system runs regardless.</p></details>
+        <details><summary>Is this just motivation and pep talks?</summary><p>No. It's a repeatable production system — prospecting, sales, retention and escalation. Motivation fades by Friday; a system runs regardless.</p></details>
         <details><summary>How much time does it take?</summary><p>[ Placeholder — dime el compromiso real de tiempo y lo pongo aquí. ]</p></details>
         <details><summary>What does it cost?</summary><p>[ Placeholder — pásame el precio / estructura y lo agrego. The fit call is where we confirm fit before any investment. ]</p></details>
         <details><summary>What happens after I apply?</summary><p>You'll book a short fit call. If it's a match, we map your production path and get you building. If it's not, we'll tell you honestly.</p></details>
@@ -371,13 +410,12 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
     </div>
   </section>
 
-  <!-- ================= FINAL CTA ================= -->
-  <section class="sec final sec--line" id="apply">
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final" id="apply">
     <div class="wrap">
-      <p class="eyebrow kicker reveal">The next step</p>
-      <h2 class="reveal">You already got licensed.<br>Now become a <span class="gold">producer.</span></h2>
-      <p class="lede center reveal" style="margin-inline:auto">The license was step one. The system is the rest. Apply now and let's build your production path.</p>
-      <div class="reveal" style="margin-top:38px;display:flex;justify-content:center">
+      <h2 class="h-xl reveal">You already got licensed.<br><span class="b">Now become a producer.</span></h2>
+      <p class="sub center reveal" style="margin-inline:auto;margin-top:22px">The license was step one. The system is the rest. Apply now and let's build your production path.</p>
+      <div class="reveal" style="margin-top:36px;display:flex;justify-content:center">
         <a class="btn btn--lg" href="#" onclick="return false" style="margin-inline:auto">Apply to join Roman Wealth Academy<span class="btn__sub">By application only · Limited seats per cohort</span></a>
       </div>
       <div class="guarantee reveal"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5z"/></svg> No hype. Honest fit call first — we only take agents we can actually help.</div>
@@ -400,7 +438,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
         </div>
       </div>
       <div class="foot__links">
-        <div><h5>Academy</h5><a href="#system" onclick="return false">The system</a><a href="#carlos" onclick="return false">Carlos Roman</a><a href="#apply" onclick="return false">Apply</a></div>
+        <div><h5>Academy</h5><a href="#carlos" onclick="return false">Carlos Roman</a><a href="#apply" onclick="return false">Apply</a></div>
         <div><h5>Contact</h5><a href="#" onclick="return false">hello@carlosromanofficial.com</a><a href="#" onclick="return false">Support</a></div>
       </div>
     </div>
@@ -408,7 +446,6 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
   </div>
 </footer>
 
-<!-- sticky mobile CTA -->
 <div class="mobicta" id="mobicta"><a class="btn" href="#apply">Apply now — 2 minutes</a></div>
 
 <script>
@@ -417,7 +454,6 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
   document.querySelectorAll(".brandmark").forEach(function(n){n.innerHTML=tpl;});
   document.getElementById("year").textContent=new Date().getFullYear();
 
-  // subtle reveal (no scroll-jack, no external libs = fast)
   var els=document.querySelectorAll(".reveal");
   if("IntersectionObserver" in window){
     var io=new IntersectionObserver(function(es){
@@ -426,7 +462,6 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
     els.forEach(function(el){io.observe(el);});
   } else { els.forEach(function(el){el.classList.add("in");}); }
 
-  // sticky mobile CTA appears after hero
   var mob=document.getElementById("mobicta"), hero=document.querySelector(".hero");
   if("IntersectionObserver" in window && mob && hero){
     new IntersectionObserver(function(es){
